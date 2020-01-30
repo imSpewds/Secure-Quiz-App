@@ -3,12 +3,14 @@
 {% block title %}Answers{% endblock %}
 
 {% block content %}
-<p>What is the least populated U.S. state?</p>
-<form action="/page5" method="POST">
-  Answer:<br>
-  <input type="text" name="fourthQ">
-  <input type="submit" value="Submit">
-  <br>
-</form>
-<!-- ASNWER: WYOMING -->
+<h3>Answers</h3>
+<ul>
+ <h3>Q1: What is Earth's largest continent?</h3>
+ <li> Answer: {{ session['firstQ'] }} </li>
+ <h3>Q2: What is the tallest mountain in the world?</h3>
+ <li> Your last name is: {{session['secondQ']}} </li>
+ <h3>Q3: What is the flattest U.S. state?</h3>
+ <li> Your favorite color is: {{session['thirdQ']}}</li>
+</ul>
+
 {% endblock %}

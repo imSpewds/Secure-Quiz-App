@@ -4,5 +4,11 @@
 
 {% block content %}
 <p>What is the flattest U.S. state?</p>
+<form action="/page4" method="POST">
+  Answer:<br>
+  <input type="text" name="thirdQ">
+  <input type="submit" value="Submit">
+  <br>
+</form>
 <!-- ANSWER: Florida -->
 {% endblock %}

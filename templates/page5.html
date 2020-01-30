@@ -4,5 +4,11 @@
 
 {% block content %}
 <p>What is the oldest city in the world?</p>
-//ANSWER: Damascus
+<form action="/page6" method="POST">
+  Answer:<br>
+  <input type="text" name="fifthQ">
+  <input type="submit" value="Submit">
+  <br>
+</form>
+<!-- ANSWER: Damascus -->
 {% endblock %}

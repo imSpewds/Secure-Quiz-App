@@ -37,7 +37,7 @@ def renderPage3():
 def renderpage4():
     if 'thirdQ' not in session:
         session['thirdQ'] = request.form['thirdQ']
-    return render_template('page4.html', isRight1 = isRight1(), isRight2 = isRight2(), isRight3 = isRight3())
+    return render_template('page4.html', isRight1 = isRight1(), isRight2 = isRight2(), isRight3 = isRight3(), display = score())
     
 def isRight1():
     response = session['firstQ']
@@ -68,6 +68,18 @@ def isRight3():
     else:
         answer = answer + Markup("Wrong")
     return answer
-    
+
+def score():
+    score = 0
+    display = ""
+    if isRight1 == "Correct":
+        score+=1
+    if isRight2 == "Correct":
+        score+=1
+    if isRight3 == "Correct":
+        score+=1
+        
+    display = display + Markup("SCORE: " + str(score))
+    return display
 if __name__=="__main__":
     app.run(debug=True)

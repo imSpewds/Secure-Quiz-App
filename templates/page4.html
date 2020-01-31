@@ -6,11 +6,11 @@
 <h3>Answers</h3>
 <ul>
  <h3>Q1: What is Earth's largest continent?</h3>
- <li> Answer: {{ session['firstQ'] }} </li>
+ <li> Answer: {{ session['firstQ'] }} <h4>{{ isRight1 }}</h4></li>
  <h3>Q2: What is the tallest mountain in the world?</h3>
- <li> Your last name is: {{session['secondQ']}} </li>
+ <li> Answer: {{session['secondQ']}} <h4>{{ isRight2 }}</h4></li>
  <h3>Q3: What is the flattest U.S. state?</h3>
- <li> Your favorite color is: {{session['thirdQ']}}</li>
+ <li> Answer: {{session['thirdQ']}} <h4>{{ isRight3 }}</h4></li>
 </ul>
 
 {% endblock %}

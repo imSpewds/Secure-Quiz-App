@@ -23,17 +23,20 @@ def renderPage1():
     
 @app.route('/page2', methods=['GET', 'POST'])
 def renderPage2():
-    session['firstQ'] = request.form['firstQ']
+    if 'firstQ' not in session:
+        session['firstQ'] = request.form['firstQ']
     return render_template('page2.html')
     
 @app.route('/page3', methods=['GET', 'POST'])
 def renderPage3():
-    session['secondQ'] = request.form['secondQ']
+    if 'secondQ' not in session:
+        session['secondQ'] = request.form['secondQ']
     return render_template('page3.html')
 
 @app.route('/page4', methods=['GET', 'POST'])
 def renderpage4():
-    session['thirdQ'] = request.form['thirdQ']
+    if 'thirdQ' not in session:
+        session['thirdQ'] = request.form['thirdQ']
     return render_template('page4.html', isRight1 = isRight1(), isRight2 = isRight2(), isRight3 = isRight3())
     
 def isRight1():

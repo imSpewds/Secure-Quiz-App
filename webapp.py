@@ -37,8 +37,8 @@ def renderpage4():
     return render_template('page4.html', isRight1 = isRight1(), isRight2 = isRight2(), isRight3 = isRight3())
     
 def isRight1():
-    first = session['firstQ']
-    first.lower()
+    response = session['firstQ']
+    first = response.lower()
     answer = ""
     if first == "asia":
         answer = answer + Markup("Correct")
@@ -47,8 +47,8 @@ def isRight1():
     return answer
     
 def isRight2():
-    second = session['secondQ']
-    second.lower()
+    response = session['secondQ']
+    second = response.lower()
     answer = ""
     if second == "mount everest":
         answer = answer + Markup("Correct")
@@ -57,8 +57,8 @@ def isRight2():
     return answer
     
 def isRight3():
-    third = session['thirdQ']
-    third.lower()
+    response = session['thirdQ']
+    third = response.lower()
     answer = ""
     if third == "florida":
         answer = answer + Markup("Correct")

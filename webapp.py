@@ -72,14 +72,14 @@ def isRight3():
 def score():
     score = 0
     display = ""
-    if isRight1 == "Correct":
-        score+=1
-    if isRight2 == "Correct":
-        score+=1
-    if isRight3 == "Correct":
-        score+=1
+    if isRight1() == "Correct":
+        score = score + 1
+    if isRight2() == "Correct":
+        score = score + 1
+    if isRight3() == "Correct":
+        score = score + 1
         
-    display = display + Markup("SCORE: " + str(score))
+    display = display + Markup("SCORE: " + str(score) + "/3")
     return display
 if __name__=="__main__":
     app.run(debug=True)
